@@ -1,0 +1,230 @@
+/**
+ * Owl Carousel v2.3.4
+ * Copyright 2013-2018 David Deutsch
+ * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+ */
+/*
+ * 	Default theme - Owl Carousel CSS File
+ */
+.owl-theme .owl-nav {
+  margin-top: 10px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent; }
+  .owl-theme .owl-nav [class*='owl-'] {
+    color: #FFF;
+    font-size: 14px;
+    margin: 5px;
+    padding: 4px 7px;
+    background: #D6D6D6;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px; }
+    .owl-theme .owl-nav [class*='owl-']:hover {
+      background: #869791;
+      color: #FFF;
+      text-decoration: none; }
+  .owl-theme .owl-nav .disabled {
+    opacity: 0.5;
+    cursor: default; }
+
+.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 10px; }
+
+
+
+.owl-theme .owl-dots {
+  text-align: center;
+ 
+ 
+
+  -webkit-tap-highlight-color: transparent; }
+  
+  .owl-theme .owl-dots .owl-dot {
+    display: inline-block;
+    zoom: 1;
+    *display: inline; 
+     
+  }
+    .owl-theme .owl-dots .owl-dot span {
+      width: 10px;
+      height: 10px;
+      margin: 5px 7px;
+      background: #D6D6D6;
+      display: block;
+      -webkit-backface-visibility: visible;
+      transition: opacity 200ms ease;
+      border-radius: 30px; }
+    .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+      }
+
+      /* About us  slide edit */
+
+      .owl-edit .owl-dots::before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        margin-top: -1px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: #bc291f;
+        z-index: -5;
+
+      }
+      .owl-edit .owl-dots {
+       
+        position: relative;}
+      .owl-edit .owl-dots::after{
+          content: "";
+            position: absolute;
+            top: 50%;
+            margin-top: -2px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: #f16b62;
+            z-index: -5;
+        }
+        .owl-edit .owl-dots .owl-dot{
+           display:inline-block;
+           background: black url(http://onepage.demo.weebpal.com/themes/onepage/assets/images/bg-panel-3.png) center top repeat;
+           position: relative;
+           top: -1px;
+           z-index:100;
+        }
+
+        .owl-edit .owl-dots .owl-dot.active span{
+          position: relative;
+          
+        }
+      
+        .owl-edit .owl-dots .owl-dot.active span::before{
+          background: #ad251c;
+          position: absolute;
+          top: 4px;
+          left: 4px;
+          content: "";
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+        }
+        .owl-edit .owl-dots .owl-dot span:hover:before, .owl-edit .owl-dots .owl-dot span:focus:before, .owl-edit .owl-dots .owl-dot span:focus::before{
+          background: #ad251c;
+          position: absolute;
+          top: 4px;
+          left: 4px;
+          content: "";
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+        }
+        .owl-edit .owl-dots .owl-dot span{
+          background: #fcf0b3;
+          height: 13px;
+          width: 13px;
+          border-radius: 50%;
+          margin: 0 3px;
+          box-shadow: 0 0 3px rgb(0 0 0 / 30%) inset;
+          opacity: 1;
+          position: relative;
+          display: block;
+        }
+
+        .owl-edit .owl-dots .owl-dot:nth-child(1) span{
+          margin-left: 10px;
+        }
+        .owl-edit .owl-dots .owl-dot:nth-child(2) span{
+          margin-right: 10px;
+        }
+      /* About us edit end */ 
+
+/* Blog slide edit */
+.blog-slide .owl-dots::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #d19f22;
+  z-index: -5;
+
+}
+.blog-slide .owl-dots {
+       
+  position: relative;}
+.blog-slide .owl-dots::after{
+    content: "";
+      position: absolute;
+      top: 50%;
+      margin-top: -2px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: #fae2a6;
+      z-index: -5;
+  }
+  .blog-slide .owl-dots .owl-dot{
+     display:inline-block;
+     background: black url(http://onepage.demo.weebpal.com/themes/onepage/assets/images/bg-panel-4.png) center top repeat;
+     position: relative;
+     top: -1px;
+     z-index:100;
+  }
+
+  .blog-slide .owl-dots .owl-dot.active span{
+    position: relative;
+    
+  }
+
+  .blog-slide .owl-dots .owl-dot.active span::before{
+    background: #9e7100;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+  }
+  .blog-slide .owl-dots .owl-dot span:hover:before, .blog-slide .owl-dots .owl-dot span:focus:before, .blog-slide .owl-dots .owl-dot span:focus::before{
+    background: #9e7100;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+  }
+  .blog-slide .owl-dots .owl-dot span{
+    background: #fcf0b3;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    margin: 0 3px;
+    box-shadow: 0 0 3px rgb(0 0 0 / 30%) inset;
+    opacity: 1;
+    position: relative;
+    display: block;
+  }
+
+  .blog-slide .owl-dots .owl-dot:nth-child(1) span{
+    margin-left: 10px;
+  }
+  .blog-slide .owl-dots .owl-dot:nth-child(2) span{
+    margin-right: 10px;
+  }
+
+/* Blog edit end */
+
+       
+        
+        
+
+
+
+
+
+     

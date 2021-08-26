@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Magazine</title>
+    <link rel="shorcut icon" type="image/png" href="./assets/images/favicon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/gallery.css">
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+
+<body>
+
+    <div id="change-skin-wrapper" class="change-skin">
+        <div class="skin-color"> <b>Skin</b>
+            <ul class="skin-color-menu">
+                <li>
+                    <a href=""></a>
+                </li>
+            </ul>
+        </div>
+        <div class="layout"> <b>Layout Boxed</b>
+            <ul class="layout-menu">
+                <li> <a href="" class="active">No</a> </li>
+                <li> <a href="">Yes</a> </li>
+            </ul>
+        </div>
+        <div class="direction"> <b>Direction</b>
+            <ul class="direction-menu">
+                <li> <a href="" class="active">LTR</a> </li>
+                <li> <a href="">RTL</a> </li>
+            </ul>
+        </div>
+        <a href="javascript:void(0)" class="change-skin-icon" onclick="showChangeSkin()"> <i class="fa fa-cog"
+                aria-hidden="true"></i> </a>
+    </div>
+	<span  class="nav-mobile-close" onclick="hideMenu()"></span>
+
+    <div id="page" class="page-wrapper">
+       
+      	<header class="header">
+				<h2 style="display: none;">Menu</h2>
+				<!-- main menu -->
+				<div class="container">
+					<nav class="navbar navbar-expand-lg  nav-menu">
+	
+						<a class="navbar-brand" href="index.html"> <img src="./assets/images/logo.svg" width="180" height="42"
+								alt=""> </a>
+	
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item "> <a class="nav-link" href="index.html">Home </a> </li>
+							<li class="nav-item"> <a class="nav-link" href="blogs.html">Blogs</a> </li>
+							<li class="nav-item"> <a class="nav-link active" href="gallery.html">Gallery</a>
+								<ul class="main-sub-nav">
+									<li> <a href="gallery-row.html">Gallery (row)</a> </li>
+								</ul>
+							</li>
+							<li class="nav-item"> <a class="nav-link " href="bed-odds.html">Bed/Odds</a> </li>
+							<li class="nav-item"> <a class="nav-link " href="video.html">Video</a> </li>
+							<li class="nav-item"> <a class="nav-link " href="contact.html">Contact</a> </li>
+							<li class="nav-item"> <a class="nav-link " href="livescore.html">Livescore</a> </li>
+						</ul>
+	
+						<div class="header-icon">
+							<div class="search-icon">
+								<input type="search"   placeholder="Keywords">
+								<a href="">
+									<i class="fas fa-search "></i>
+								</a>
+	
+							</div>
+							<div class="login-icon">
+								<a href="#" class="icon-item" onclick="showHideLogin()">
+									<i class="fas fa-sign-in-alt "></i>
+	
+								</a>
+								<div id="login-block" class="login-form">
+									<div class="login-content">
+										<div class="username">
+	
+											<label for="username-in" class="title-require">Username</label>
+	
+											<input type="text"  id="username-in">
+	
+										</div>
+										<div class="password">
+	
+											<label for="password-in" class="title-require">Password</label>
+	
+											<input type="password"  id="password-in">
+										</div>
+										<div class="login-btn">
+											<input type="submit" value="LOG IN">
+										</div>
+										<div class="reset-passwd">
+											<ul class="reset-list">
+												<li><a href="">Reset your password</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+	
+							<div class="menu-icon" onclick="openPrimaryMenu()">
+	
+								<i class="fas fa-bars"></i>
+	
+	
+	
+							</div>
+	
+						</div>
+	
+						<div id="overlay" class="overlay" onclick="hideMenu()"></div>
+						<nav id="nav-mobile" class="nav-mobile">
+							
+							<ul class="nav-mobile-list">
+								<li class="nav-mobile-item "> <a class="nav-mobile-link" href="index.html">Home </a>
+								</li>
+								<li class="nav-mobile-item"> <a class="nav-mobile-link " href="blogs.html">Blogs</a>
+								</li>
+	
+								<li class="nav-mobile-item nav-mobile-item--edit">
+	
+									<a class="nav-mobile-link nav-mobile-item--edit dropdown-btn active-sub-nav" href="#">Gallery
+										<i class="fas fa-chevron-down"></i>
+									</a>
+	
+									<ul class="sub-nav-mobile">
+										<li> <a href="gallery-row.html">Gallery (row)</a> </li>
+									</ul>
+	
+								</li>
+	
+								<li class="nav-mobile-item"> <a class="nav-mobile-link " href="bed-odds.html">Bed/Odds</a> </li>
+								<li class="nav-mobile-item"> <a class="nav-mobile-link " href="video.html">Video</a> </li>
+								<li class="nav-mobile-item"> <a class="nav-mobile-link " href="contact.html">Contact</a>
+								</li>
+								<li class="nav-mobile-item"> <a class="nav-mobile-link " href="livescore.html">Livescore</a> </li>
+							</ul>
+						</nav>
+	
+						<div class="sport-menu">
+							<ul class="nav">
+								<li class="nav-item"> <a class="nav-link" href="#">Swimming</a> </li>
+								<li class="nav-item"> <a class="nav-link nav-link-icon" href="#">Tennis
+	
+									</a>
+									<ul class="sport-sub-nav">
+										<li> <a href=""> Tennis Video</a> </li>
+										<li> <a href=""> WTA Schedule </a> </li>
+										<li> <a href=""> Tennis Photo </a> </li>
+										<li> <a href=""> Tennis News </a> </li>
+										<li> <a href=""> ATP Schedule </a> </li>
+										<li> <a href=""> Rankings </a> </li>
+									</ul>
+								</li>
+								<li class="nav-item"> <a class="nav-link" href="#">Sailing</a> </li>
+								<li class="nav-item"> <a class="nav-link nav-link-icon" href="#">Golf
+									</a>
+									<ul class="sport-sub-nav">
+										<li> <a href=""> European Tour </a> </li>
+										<li> <a href=""> Ryder Cup </a> </li>
+										<li> <a href=""> Open Championship </a> </li>
+										<li> <a href=""> US PGA Tour </a> </li>
+									</ul>
+								</li>
+								<li class="nav-item"> <a class="nav-link nav-link-icon " href="#">Football
+	
+									</a>
+									<ul class="sport-sub-nav">
+										<li> <a href=""> Series A </a> </li>
+										<li> <a href=""> Ligue 1 </a> </li>
+										<li> <a href=""> Premier League </a> </li>
+										<li> <a href=""> Scottish Premier </a> </li>
+										<li> <a href=""> League Two </a> </li>
+										<li> <a href=""> Live Fixtures </a> </li>
+										<li> <a href=""> League One </a> </li>
+										<li> <a href=""> Europa League </a> </li>
+										<li> <a href=""> Internationals </a> </li>
+										<li> <a href=""> Bundesliga </a> </li>
+										<li> <a href=""> Champions League </a> </li>
+										<li> <a href=""> La Liga </a> </li>
+										<li> <a href=""> Championship </a> </li>
+									</ul>
+								</li>
+								<li class="nav-item"> <a class="nav-link " href="#">Motorsport</a> </li>
+								<li class="nav-item"> <a class="nav-link nav-link-icon " href="#">Cricket
+	
+									</a>
+									<ul class="sport-sub-nav">
+										<li> <a href=""> County Cricket </a> </li>
+										<li> <a href=""> Cricket AM </a> </li>
+										<li> <a href=""> Indian Premier League </a> </li>
+										<li> <a href=""> International Cricket </a> </li>
+										<li> <a href=""> Ashes </a> </li>
+									</ul>
+								</li>
+								<li class="nav-item"> <a class="nav-link nav-link-icon " href="#">Rugby
+										Union
+									</a>
+									<ul class="sport-sub-nav">
+										<li> <a href=""> Aviva Premiership </a> </li>
+										<li> <a href=""> British and Irish Lions </a> </li>
+										<li> <a href=""> Rugby League News </a> </li>
+										<li> <a href=""> Heineken Cup </a> </li>
+										<li> <a href=""> Rugby Live on Sky </a> </li>
+										<li> <a href=""> Rugby Worldcup </a> </li>
+									</ul>
+								</li>
+								<li class="nav-item"> <a class="nav-link " style="  border: none !important;"
+										href="#">Skiing</a>
+								</li>
+							</ul>
+						</div>
+	
+						<div class="sport-menu-mobile">
+							<a href="#" onclick="openSportsMenu()">
+								<i class="fas fa-bars" ></i>
+	
+							</a>
+						</div>
+	
+					</nav>
+	
+					<nav id="sport-nav-mobile" class="sport-nav-mobile">
+						
+						<ul class="sport-nav-mobile-list">
+							<li class="sport-nav-mobile-item"> <a class="sport-nav-mobile-link" href="#">Swimming</a>
+							</li>
+							<li class="sport-nav-mobile-item ">
+								<a class="sport-nav-mobile-link dropdown-btn" href="#">Tennis
+									<i class="fas fa-chevron-down"></i>
+								</a>
+								<ul class="sport-sub-nav">
+									<li> <a href=""> Tennis Video</a> </li>
+									<li> <a href=""> WTA Schedule </a> </li>
+									<li> <a href=""> Tennis Photo </a> </li>
+									<li> <a href=""> Tennis News </a> </li>
+									<li> <a href=""> ATP Schedule </a> </li>
+									<li> <a href=""> Rankings </a> </li>
+								</ul>
+							</li>
+							<li class="sport-nav-mobile-item"> <a class="sport-nav-mobile-link" href="#">Sailing</a>
+							</li>
+							<li class="sport-nav-mobile-item"> <a class="sport-nav-mobile-link  dropdown-btn" href="#">Golf
+									<i class="fas fa-chevron-down"></i>
+								</a>
+								<ul class="sport-sub-nav">
+									<li> <a href=""> European Tour </a> </li>
+									<li> <a href=""> Ryder Cup </a> </li>
+									<li> <a href=""> Open Championship </a> </li>
+									<li> <a href=""> US PGA Tour </a> </li>
+								</ul>
+							</li>
+							<li class="sport-nav-mobile-item"> <a class="sport-nav-mobile-link  dropdown-btn "
+									href="#">Football <i class="fas fa-chevron-down"></i>
+								</a>
+								<ul class="sport-sub-nav">
+									<li> <a href=""> Series A </a> </li>
+									<li> <a href=""> Ligue 1 </a> </li>
+									<li> <a href=""> Premier League </a> </li>
+									<li> <a href=""> Scottish Premier </a> </li>
+									<li> <a href=""> League Two </a> </li>
+									<li> <a href=""> Live Fixtures </a> </li>
+									<li> <a href=""> League One </a> </li>
+									<li> <a href=""> Europa League </a> </li>
+									<li> <a href=""> Internationals </a> </li>
+									<li> <a href=""> Bundesliga </a> </li>
+									<li> <a href=""> Champions League </a> </li>
+									<li> <a href=""> La Liga </a> </li>
+									<li> <a href=""> Championship </a> </li>
+								</ul>
+							</li>
+							<li class="sport-nav-mobile-item"> <a class="sport-nav-mobile-link " href="#">Motorsport</a>
+							</li>
+							<li class="sport-nav-mobile-item"> <a class="sport-nav-mobile-link   dropdown-btn"
+									href="#">Cricket
+									<i class="fas fa-chevron-down"></i>
+								</a>
+								<ul class="sport-sub-nav">
+									<li> <a href=""> County Cricket </a> </li>
+									<li> <a href=""> Cricket AM </a> </li>
+									<li> <a href=""> Indian Premier League </a> </li>
+									<li> <a href=""> International Cricket </a> </li>
+									<li> <a href=""> Ashes </a> </li>
+								</ul>
+							</li>
+							<li class="sport-nav-mobile-item"> <a class="sport-nav-mobile-link  dropdown-btn" href="#">Rugby
+									Union <i class="fas fa-chevron-down"></i>
+								</a>
+								<ul class="sport-sub-nav">
+									<li> <a href=""> Aviva Premiership </a> </li>
+									<li> <a href=""> British and Irish Lions </a> </li>
+									<li> <a href=""> Rugby League News </a> </li>
+									<li> <a href=""> Heineken Cup </a> </li>
+									<li> <a href=""> Rugby Live on Sky </a> </li>
+									<li> <a href=""> Rugby Worldcup </a> </li>
+								</ul>
+							</li>
+							<li class="sport-nav-mobile-item"> <a class="sport-nav-mobile-link "
+									style="  border: none !important;" href="#">Skiing</a>
+							</li>
+						</ul>
+					</nav>
+	
+				</div>
+				<!-- main menu end -->
+		</header>
+      	<section id="banner">
+                <h2 style="display: none;">Banner</h2>
+                    <div class="container" style="padding: 0 0px;">
+                        <div class="region-banner">
+                            <div class="row" style="width: 100%;
+                            margin: 0;">
+                                <img src="./assets/images/banner.jpg"
+                                    class="img-fluid" alt="" style="width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+        </section>
+
+       <section id="gallery">
+                <div class="container">
+                    <div class="region-gallery">
+                        <h1 class="title">Gallery</h1>
+                        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper vel
+                            odio at rutrum. Etiam eleifend purus neque.
+                        </p>
+                        <div class=" row gallery-photos ">
+                            <div class="col-3 col-sm-3 gallery-photo">
+                                
+                                    <div class="gallery-photo-image">
+                                        <a href="" class="">
+                                            <img src="./assets/images/gallery/1.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="gallery-photo-content">
+                                        <span class="">
+                                            <a href=""> Bruce Springsteen's</a>
+                                        </span>
+                                    </div>
+                                  
+                                
+                            </div>
+                            <div class="col-3 col-sm-3 gallery-photo">
+                                
+                                    <div class="gallery-photo-image">
+                                        <a href="" class="">
+                                            <img src="./assets/images/gallery/2.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="gallery-photo-content">
+                                        <span class="">
+                                            <a href=""> Nobis Nulla</a>
+                                        </span>
+                                    </div>
+                                  
+                                
+                            </div>
+                            <div class="col-3 col-sm-3 gallery-photo">
+                                
+                                    <div class="gallery-photo-image">
+                                        <a href="" class="">
+                                            <img src="./assets/images/gallery/3.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="gallery-photo-content">
+                                        <span class="">
+                                            <a href=""> Commoveo Macto Quadrum Turpis</a>
+                                        </span>
+                                    </div>
+                                    
+                               
+                            </div>
+                            <div class="col-3 col-sm-3 gallery-photo">
+                                
+                                    <div class="gallery-photo-image">
+                                        <a href="" class="">
+                                            <img src="./assets/images/gallery/4.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="gallery-photo-content">
+                                        <span class="">
+                                            <a href=""> Nobis Vel</a>
+                                        </span>
+                                    </div>
+                                   
+                              
+                            </div>
+                            
+                           
+                           
+                           
+                        </div>
+                        <div class="row gallery-photos">
+                            <div class="col-3 col-sm-3 gallery-photo">
+                               
+                                    <div class="gallery-photo-image">
+                                        <a href="" class="">
+                                            <img src="./assets/images/gallery/5.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="gallery-photo-content">
+                                        <span class="">
+                                            <a href=""> Modo</a>
+                                        </span>
+                                    </div>
+                                   
+                               
+                            </div>
+                            <div class="col-3 col-sm-3 gallery-photo">
+                               
+                                    <div class="gallery-photo-image">
+                                        <a href="" class="">
+                                            <img src="./assets/images/gallery/6.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="gallery-photo-content">
+                                        <span class="">
+                                            <a href=""> Facilisis Feugiat</a>
+                                        </span>
+                                    </div>
+                                   
+                               
+                            </div>
+                            <div class="col-3 col-sm-3 gallery-photo">
+                              
+                                    <div class="gallery-photo-image">
+                                        <a href="" class="">
+                                            <img src="./assets/images/gallery/7.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="gallery-photo-content">
+                                        <span class="">
+                                            <a href=""> Ex Probo</a>
+                                        </span>
+                                    </div>
+                                   
+                              
+                            </div>
+                            <div class="col-3 col-sm-3 gallery-photo">
+                                
+                                    <div class="gallery-photo-image">
+                                        <a href="" class="">
+                                            <img src="./assets/images/gallery/8.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="gallery-photo-content">
+                                        <span class="">
+                                            <a href=""> Oppeto</a>
+                                        </span>
+                                    </div>
+                                   
+                                
+                            </div>
+                          
+                           
+                           
+                           
+                        </div>
+                        <div class="row gallery-photos">
+                            <div class="col-3 col-sm-3 gallery-photo  ">
+                             
+                                    <div class="gallery-photo-image">
+                                        <a href="" class="">
+                                            <img src="./assets/images/gallery/9.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="gallery-photo-content">
+                                        <span class="">
+                                            <a href=""> Ille</a>
+                                        </span>
+                                    </div>
+                                   
+                               
+                            </div>
+                            <div class="col-3 col-sm-3 gallery-photo  ">
+                             
+                                    <div class="gallery-photo-image">
+                                        <a href="" class="gallery-icon">
+                                            <img src="./assets/images/gallery/10.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="gallery-photo-content">
+                                        <span class="">
+                                            <a href=""> Bene Vulputate</a>
+                                        </span>
+                                    </div>
+                                   
+                               
+                            </div>
+                            <div class="col-3 col-sm-3 gallery-photo  ">
+                             
+                                    <div class="gallery-photo-image">
+    
+                                        <a href="" class="">
+                                            <img src="./assets/images/gallery/11.jpg" alt="">
+                                        </a>
+                                      
+                                    </div>
+                                    <div class="gallery-photo-content">
+                                        <span class="">
+                                            <a href=""> Imputo</a>
+                                        </span>
+                                    </div>                                
+                                   
+                                    
+                                
+                            </div>
+                            <div class="col-3 col-sm-3 gallery-photo  ">
+                             
+                                    <div class="gallery-photo-image">
+                                        <a href="" class="">
+                                            <img src="./assets/images/gallery/12.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="gallery-photo-content">
+                                        <span class="">
+                                            <a href=""> Bene</a>
+                                        </span>
+                                    </div>
+                                   
+                                
+                            </div>
+                           
+                            
+                          
+                            
+                        </div>
+                       
+                         <nav class="pager">
+                                <ul class="pager-list">
+                                    <li class="active">
+                                        <a href="#">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">Next ›</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Last »</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                    </div>
+                </div>
+       </section>
+        
+        <section class="section-five">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-md-2 col-lg-2 p-0">
+						<div class="section-five-content">
+							<h2><span>Football</span></h2>
+							<ul class="section-five-list list--edit">
+								<li><a href="">Series A</a></li>
+								<li><a href="">Ligue 1</a></li>
+								<li><a href="">Premier League</a></li>
+								<li><a href="">Scottish Premier</a></li>
+								<li><a href="">League Two</a></li>
+								<li><a href="">Live Fixtures</a></li>
+								<li><a href="">League One</a></li>
+								<li><a href="">Internationals</a></li>
+								<li><a href="">Champions League</a></li>
+								<li><a href="">La Liga</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-2 col-lg-2 p-0">
+						<div class="section-five-content">
+							<div class="section-five-content-min">
+								<h2><span>Rugby Union</span></h2>
+								<ul class="section-five-list " style="margin-bottom: 30px;">
+									<li><a href="">Aviva Premiership</a></li>
+									<li><a href="">Rugby League News</a></li>
+									<li><a href="">Rugby Live on Sky</a></li>
+
+								</ul>
+							</div>
+							<div class="section-five-content-min">
+								<h2><span>Cricket</span></h2>
+								<ul class="section-five-list list--edit">
+									<li><a href="">County Cricket</a></li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-2 col-lg-2 p-0">
+						<div class="section-five-content">
+							<div class="section-five-content-min">
+								<h2><span>Golf</span></h2>
+								<ul class="section-five-list" style="margin-bottom: 30px;">
+									<li><a href="">European Tour</a></li>
+									<li><a href="">Ryder Cup</a></li>
+									<li><a href="">US PGA Tour</a></li>
+
+								</ul>
+							</div>
+							<div class="section-five-content-min ">
+								<h2><span>Tennis</span></h2>
+								<ul class="section-five-list list--edit">
+									<li><a href="">Tennis Video</a></li>
+									<li><a href="">WTA Schedule</a></li>
+									<li><a href="">Tennis Photo</a></li>
+									<li><a href="">Tenis News</a></li>
+									<li><a href="">Rankings</a></li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12  col-md-2 col-lg-2 p-0">
+						<div class="section-five-content">
+							<h2><span>More Sports</span></h2>
+							<ul class="section-five-list section-five-list--edit list--edit">
+								<li><a href="">Boxing</a></li>
+								<li><a href="">Horce Racing</a></li>
+
+								<li><a href="">Cycling</a></li>
+								<li><a href="">Snooker</a></li>
+								<li><a href="">Dafts</a></li>
+								<li><a href="">NFL</a></li>
+								<li><a href="">Speedway</a></li>
+								<li><a href="">Motor Sport</a></li>
+								<li><a href="">WWE</a></li>
+								<li><a href="">Olympics</a></li>
+								<li><a href="">Sports Calendar</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-4 col-lg-4 p-0">
+						<div class="section-five-content">
+							<h2><span>BBC Tweets</span></h2>
+							<p>Or connect with us</p>
+							<ul class="social-list">
+								<li>
+									<a class="fa fa-facebook" href="#">
+										<span>Facebook</span>
+									</a>
+									
+								<li>
+									<a class="fa fa-twitter" href="#">
+										<span>Twitter</span>
+									</a>
+								</li>
+								<li>
+									<a class="fa fa-google-plus" href="#">
+										<span>Google</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+        <footer class="footer">
+            <div class="container">
+                <div class="  row">
+                    <div class="col-12 col-xl-6 p-0">
+                        <div class="copy-right">
+                            <p>Copyright © 2014 Sport Magazine. All Rights Reserved. Designed by <a
+                                    href="https://weebpal.com/" target="_blank">WeebPal</a>.
+                                Powered by <a href="https://www.drupal.org/" target="_blank">Drupal</a></p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-6 p-0">
+                        <ul class="footer-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">FAQ</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Terms & Conditions</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <a href="#" id="backtop"> </a>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="./js/main.js"></script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

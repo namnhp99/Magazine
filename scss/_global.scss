@@ -1,0 +1,35 @@
+*{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import "typography";
+
+html{
+    scroll-behavior: smooth;
+   
+    body{
+        font-size: 16px;
+        font-family: 'Open Sans', sans-serif;
+        li{
+            list-style-type: none;
+        }
+        ul{
+            padding: 0;
+        }
+        a{
+            &:hover{
+                text-decoration: none;
+                color: #121212;
+            }
+           
+            color: #121212;
+        }
+        label{
+            margin-bottom: 0;
+        }
+    }
+}
+
+

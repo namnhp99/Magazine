@@ -1,0 +1,95 @@
+@font-face {
+  font-family: 'oregon';
+  src: url("../assets/fonts/oregon_ldo-webfont.woff");
+  font-weight: 300,400,500,700; }
+@font-face {
+  font-family: 'titil';
+  src: url("../assets/fonts/titillium-regular-webfont.woff");
+  font-weight: 300,400,500,700; }
+@font-face {
+  font-family: 'roboto';
+  src: url("../assets/fonts/roboto_font.woff2"); }
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+  @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800"); }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: 'oregon';
+  src: url("../assets/fonts/oregon_ldo-webfont.woff");
+  font-weight: 300,400,500,700; }
+@font-face {
+  font-family: 'titil';
+  src: url("../assets/fonts/titillium-regular-webfont.woff");
+  font-weight: 300,400,500,700; }
+@font-face {
+  font-family: 'roboto';
+  src: url("../assets/fonts/roboto_font.woff2"); }
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+  @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800"); }
+html {
+  scroll-behavior: smooth; }
+  html body {
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif; }
+    html body li {
+      list-style-type: none; }
+    html body ul {
+      padding: 0; }
+    html body a {
+      color: #121212; }
+      html body a:hover {
+        text-decoration: none;
+        color: #121212; }
+    html body label {
+      margin-bottom: 0; }
+
+@font-face {
+  font-family: 'oregon';
+  src: url("../assets/fonts/oregon_ldo-webfont.woff");
+  font-weight: 300,400,500,700; }
+@font-face {
+  font-family: 'titil';
+  src: url("../assets/fonts/titillium-regular-webfont.woff");
+  font-weight: 300,400,500,700; }
+@font-face {
+  font-family: 'roboto';
+  src: url("../assets/fonts/roboto_font.woff2"); }
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+  @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800"); }
+.page-wrapper .livescore .section-wrapper {
+  padding: 30px 30px 30px 30px; }
+  .page-wrapper .livescore .section-wrapper .first-sidebar {
+    text-align: left; }
+    .page-wrapper .livescore .section-wrapper .first-sidebar .league-block {
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+      overflow-x: auto; }
+      .page-wrapper .livescore .section-wrapper .first-sidebar .league-block .tournament-table tr .match-time {
+        padding-left: 15px;
+        text-align: left;
+        line-height: 20px; }
+      .page-wrapper .livescore .section-wrapper .first-sidebar .league-block .tournament-table tr .league {
+        font-family: 'titil' !important;
+        font-weight: 300 !important;
+        padding-right: 15px !important;
+        text-align: right !important; }
+        .page-wrapper .livescore .section-wrapper .first-sidebar .league-block .tournament-table tr .league a {
+          color: #fff; }
+      .page-wrapper .livescore .section-wrapper .first-sidebar .league-block .tournament-table tr .teamA,
+      .page-wrapper .livescore .section-wrapper .first-sidebar .league-block .tournament-table tr .teamB {
+        font-family: 'oregon' !important;
+        font-weight: 300 !important;
+        font-size: 1.125em !important;
+        line-height: 26px; }
+      .page-wrapper .livescore .section-wrapper .first-sidebar .league-block .tournament-table tr:nth-child(odd) {
+        background-color: #56bbb8 !important; }
+      .page-wrapper .livescore .section-wrapper .first-sidebar .league-block .tournament-table tr:nth-child(even) {
+        background-color: #2CAAA6 !important; }
+
+/*# sourceMappingURL=livescore.css.map */

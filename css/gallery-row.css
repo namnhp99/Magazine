@@ -1,0 +1,134 @@
+@font-face {
+  font-family: 'oregon';
+  src: url("../assets/fonts/oregon_ldo-webfont.woff");
+  font-weight: 300,400,500,700; }
+@font-face {
+  font-family: 'titil';
+  src: url("../assets/fonts/titillium-regular-webfont.woff");
+  font-weight: 300,400,500,700; }
+@font-face {
+  font-family: 'roboto';
+  src: url("../assets/fonts/roboto_font.woff2"); }
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+  @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800"); }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: 'oregon';
+  src: url("../assets/fonts/oregon_ldo-webfont.woff");
+  font-weight: 300,400,500,700; }
+@font-face {
+  font-family: 'titil';
+  src: url("../assets/fonts/titillium-regular-webfont.woff");
+  font-weight: 300,400,500,700; }
+@font-face {
+  font-family: 'roboto';
+  src: url("../assets/fonts/roboto_font.woff2"); }
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+  @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800"); }
+html {
+  scroll-behavior: smooth; }
+  html body {
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif; }
+    html body li {
+      list-style-type: none; }
+    html body ul {
+      padding: 0; }
+    html body a {
+      color: #121212; }
+      html body a:hover {
+        text-decoration: none;
+        color: #121212; }
+    html body label {
+      margin-bottom: 0; }
+
+@font-face {
+  font-family: 'oregon';
+  src: url("../assets/fonts/oregon_ldo-webfont.woff");
+  font-weight: 300,400,500,700; }
+@font-face {
+  font-family: 'titil';
+  src: url("../assets/fonts/titillium-regular-webfont.woff");
+  font-weight: 300,400,500,700; }
+@font-face {
+  font-family: 'roboto';
+  src: url("../assets/fonts/roboto_font.woff2"); }
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+  @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800"); }
+.gallery-row .first-sidebar {
+  padding-left: 0; }
+.gallery-row .region-gallery .desc {
+  margin-left: 7px; }
+.gallery-row .region-gallery .gallery-photos {
+  margin: 0 !important; }
+  .gallery-row .region-gallery .gallery-photos .gallery-photo {
+    padding-left: 0 !important;
+    padding-right: 0 !important; }
+    .gallery-row .region-gallery .gallery-photos .gallery-photo-image {
+      margin-bottom: 10px; }
+      .gallery-row .region-gallery .gallery-photos .gallery-photo-image:hover a::after {
+        display: block; }
+    .gallery-row .region-gallery .gallery-photos .gallery-photo-content-title {
+      font-family: 'oregon';
+      font-weight: 300;
+      font-size: 1em;
+      margin-bottom: 20px; }
+      .gallery-row .region-gallery .gallery-photos .gallery-photo-content-title a:hover {
+        color: #eb6a14; }
+    .gallery-row .region-gallery .gallery-photos .gallery-photo-content-time-create {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      font-size: 0.75em;
+      color: #eb6a14;
+      margin-bottom: 5px; }
+    .gallery-row .region-gallery .gallery-photos .gallery-photo-content-desc {
+      text-align: left;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      font-size: 0.875em;
+      color: #787878;
+      margin-bottom: 15px;
+      line-height: 1.5; }
+.gallery-row .post {
+  padding-left: 22px;
+  padding-right: 0; }
+  .gallery-row .post h2 {
+    font-family: 'titil';
+    font-weight: 400;
+    border: none;
+    border-left: 5px solid #eb6a14;
+    color: #121212;
+    font-size: 1.5em;
+    line-height: 1;
+    padding-left: 10px;
+    margin-bottom: 30px; }
+  .gallery-row .post-item-image {
+    margin-bottom: 10px; }
+    .gallery-row .post-item-image img {
+      width: 100%;
+      height: auto; }
+  .gallery-row .post-item-content-title {
+    font-family: 'oregon';
+    font-weight: 400;
+    font-size: 1em;
+    margin-bottom: 10px;
+    line-height: 1.2; }
+    .gallery-row .post-item-content-title a:hover {
+      color: #eb6a14; }
+  .gallery-row .post-item-content-time-create {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 0.75em;
+    color: #eb6a14;
+    margin-bottom: 5px; }
+.gallery-row .pager {
+  margin-top: 0 !important; }
+
+/*# sourceMappingURL=gallery-row.css.map */

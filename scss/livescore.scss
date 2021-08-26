@@ -1,0 +1,63 @@
+@import "typography";
+@import "global";
+@import "mixin";
+
+.page-wrapper{
+    .livescore {
+        .section-wrapper{
+            padding: 30px 30px 30px 30px;
+            .first-sidebar {
+                text-align: left;
+              
+                .league-block {
+                    margin-bottom: 30px;
+                    padding-bottom: 30px;
+                    overflow-x: auto;
+                    .tournament-table {
+                   
+                        tr {
+                           
+                            .match-time{
+                                padding-left: 15px;
+                                text-align: left;
+                                   
+                                line-height: 20px;
+                            }
+            
+                            .league {
+                                font-family: 'titil' !important;
+                                font-weight: 300 !important;
+            
+                                padding-right: 15px !important;
+                                text-align: right !important;
+            
+                                a {
+                                    color: #fff;
+                                }
+                            }
+            
+                            .teamA,
+                            .teamB {
+                                font-family: 'oregon' !important;
+                                font-weight: 300 !important;
+                                font-size: 1.125em !important;
+                                line-height: 26px;
+                            }
+            
+                            &:nth-child(odd) {
+                                background-color: #56bbb8 !important;
+                            }
+            
+                            &:nth-child(even) {
+                                background-color: #2CAAA6 !important;
+                            }
+                        }
+                    }
+                }
+               
+            }
+        }
+        
+       
+    }
+}

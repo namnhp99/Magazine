@@ -1,0 +1,57 @@
+@import 'typography';
+
+@mixin bg-color1 {
+    background-color: #0098AA;
+    
+}
+@mixin bg-color2 {
+    background-color: #050505;
+    
+}
+@mixin bg-color3 {
+    background-color: #EB6A14;
+    
+}
+@mixin bg-color4 {
+    background-color: #EEEEEE;
+    
+}
+
+
+
+
+@mixin opensans($weight) {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: $weight;
+    
+}
+@mixin oregon($weight) {
+    font-family:'oregon';
+    font-weight: $weight;
+    
+}
+@mixin titil ($weight) {
+    font-family: 'titil';
+    font-weight: $weight;
+    
+}
+@mixin  roboto($weight) {
+    font-family: 'roboto';
+    font-weight: $weight;
+    
+}
+
+
+
+
+
+@mixin center {
+    position: absolute;
+    /* Dịch chuyển 50% theo theo phần tử định vị*/
+    top: 50%;
+    left: 50%;
+    /* Dịch chuyển ngược lại 50% theo chiều rộng và chiều cao */
+    transform: translate(-50%, -50%);
+    
+}
+

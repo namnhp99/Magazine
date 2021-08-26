@@ -1,0 +1,16 @@
+@import "typography";
+@import "global";
+@import "mixin";
+
+#video{
+    .section-wrapper{
+        padding: 30px 30px 16px 30px !important;  
+        h1{
+            @include titil(400);
+            font-size: 2.25em;
+            color: #787878;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+    }
+}
